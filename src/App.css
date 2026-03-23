@@ -129,3 +129,88 @@
         font-size: 36px;
     }
 }
+
+
+/* Navbar container */
+.navbar {
+  background: linear-gradient(90deg, #2e7d32, #43a047);
+  padding: 12px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Brand/logo */
+.navbar-brand {
+  color: #ffffff !important;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #c8e6c9 !important;
+}
+
+/* Nav links */
+.nav-link {
+  color: #ffffff !important;
+  margin-right: 15px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Hover effect */
+.nav-link:hover {
+  color: #c8e6c9 !important;
+}
+
+/* Underline animation */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #c8e6c9;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Right side buttons */
+.navbar .btn.nav-link {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Username styling */
+.navbar .nav-link:first-child {
+  font-weight: 500;
+}
+
+/* Mobile toggle button */
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+/* Custom hamburger icon color */
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* Responsive spacing */
+@media (max-width: 768px) {
+  .nav-link {
+    margin: 10px 0;
+  }
+
+  .navbar {
+    padding: 10px;
+  }
+}
