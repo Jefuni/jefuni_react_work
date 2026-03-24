@@ -12,28 +12,30 @@ function App() {
   return (
 
     <BrowserRouter>
-    <div className="App">
-    <header className="header">
-      <div className="header-content">
+      <div className="container-fluid">
+        <div className="App">
+          <header className="header">
+            <div className="header-content">
 
-        {/* Text Section */}
-        <div className="text-section">
-          <h1 className="brand">Topmark Laptops</h1>
-          <p className="tagline">Your Tech Brand</p>
-        </div>
-      </div>
-    </header>
-    <Routes>
-            <Route path='/signin' element={<SignInComponent/>}/>
+              {/* Text Section */}
+              <div className="text-section">
+                <h1 className="brand">Topmark Laptops</h1>
+                <p className="tagline">Your Tech Brand</p>
+              </div>
+            </div>
+          </header>
+          <Routes>
+            <Route path='/signin' element={<SignInComponent />} />
 
-            <Route path='/signup' element={<SignUpComponent/>}/>
-            <Route path='/addproduct' element={<AddProductComponent/>}/>
-            <Route path='/' element={<GetProduct/>}/>  
-            <Route path='/makepayment' element={<MakePayment/>}/>
-          
+            <Route path='/signup' element={<SignUpComponent />} />
+            <Route path='/addproduct' element={<AddProductComponent />} />
+            <Route path='/' element={<GetProduct />} />
+            <Route path='/makepayment' element={<MakePayment />} />
+
 
           </Routes>
-    </div>
+        </div>
+      </div>
     </BrowserRouter>
   );
 }

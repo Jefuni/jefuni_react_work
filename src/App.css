@@ -41,17 +41,18 @@
 
 /* Header background */
 .header {
-    height: 300px;
+    height: 20vh;
     background: linear-gradient(135deg, #0ea5e9, #22c55e);
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
+    width: 100%;
 }
 
 /* Layout */
 .header-content {
-    width: 90%;
+    width: 100%;
     max-width: 1100px;
     display: flex;
     align-items: center;
@@ -133,48 +134,55 @@
 
 /* Navbar container */
 .navbar {
-  background: linear-gradient(90deg, #2e7d32, #43a047);
-  padding: 12px 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(90deg, #1565c0, #41657e, #43a047);
+  padding: 14px 24px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
 }
 
 /* Brand/logo */
 .navbar-brand {
   color: #ffffff !important;
-  font-size: 1.5rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  transition: 0.3s ease;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  transition: all 0.3s ease;
 }
 
+/* Glow + slight scale on hover */
 .navbar-brand:hover {
-  color: #c8e6c9 !important;
+  color: #bbdefb !important;
+  transform: scale(1.05);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
 }
 
 /* Nav links */
 .nav-link {
   color: #ffffff !important;
-  margin-right: 15px;
-  font-size: 1rem;
+  margin-right: 18px;
+  font-size: 1.05rem;
   transition: all 0.3s ease;
   position: relative;
+  padding: 6px 4px;
 }
 
 /* Hover effect */
 .nav-link:hover {
-  color: #c8e6c9 !important;
+  color: #b2dfdb !important;
+  transform: translateY(-2px);
 }
 
-/* Underline animation */
+/* Underline animation (gradient) */
 .nav-link::after {
   content: "";
   position: absolute;
   width: 0%;
-  height: 2px;
-  bottom: 0;
+  height: 3px;
+  bottom: -2px;
   left: 0;
-  background-color: #c8e6c9;
-  transition: width 0.3s ease;
+  background: linear-gradient(90deg, #64b5f6, #69f0ae);
+  border-radius: 2px;
+  transition: width 0.35s ease;
 }
 
 .nav-link:hover::after {
@@ -190,27 +198,35 @@
 
 /* Username styling */
 .navbar .nav-link:first-child {
-  font-weight: 500;
+  font-weight: 600;
+  color: #e3f2fd !important;
 }
 
 /* Mobile toggle button */
 .navbar-toggler {
   border: none;
   outline: none;
+  transition: 0.3s ease;
+}
+
+/* Toggle hover effect */
+.navbar-toggler:hover {
+  transform: rotate(90deg);
 }
 
 /* Custom hamburger icon color */
 .navbar-toggler-icon {
-  filter: invert(1);
+  filter: invert(1) brightness(1.5);
 }
 
 /* Responsive spacing */
 @media (max-width: 768px) {
   .nav-link {
-    margin: 10px 0;
+    margin: 12px 0;
+    text-align: center;
   }
 
   .navbar {
-    padding: 10px;
+    padding: 12px;
   }
 }

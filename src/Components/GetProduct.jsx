@@ -10,6 +10,7 @@ const GetProduct = () => {
     let [error, setError] = useState("")
 
 
+
     // base url for image location
     const img_url = "https://jefuni.alwaysdata.net/static/images/"
 
@@ -47,6 +48,8 @@ const GetProduct = () => {
             <h3>Available Products</h3>
             <h5 className="text-danger">{error}</h5>
             <h5 className="text-warning">{loading}</h5>
+
+            
 
             {/* map/loop over the product array to acess one at a time */}
 
