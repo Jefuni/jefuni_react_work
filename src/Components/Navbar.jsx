@@ -13,7 +13,7 @@ const Navbar = () => {
     }
     return (
         <nav className="navbar navbar-expand-lg ">
-            <Link className="navbar-brand" to="/">Topmark Laptops</Link>
+            <Link className="navbar-brand" to="/">|      Topmark Technologies</Link>
 
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" >
                 <span className="navbar-toggler-icon"></span>

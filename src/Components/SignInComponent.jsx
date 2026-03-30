@@ -68,17 +68,21 @@ const SignInComponent = () => {
 
     }
     return(
-        <div className="row justify-content-center mt-4">
+        <div className="row">
             <Navbar/>
+        <div className="row justify-content-center mt-4">
+            
             <div className="col-md-6 card shadow p-4">
                 <h2>Sign In</h2>
                 <h5 className="text-warning">{loading}</h5>
                 <h5 className="text-danger">{error}</h5>
                 <h5 className="text-success">{success}</h5>
                 <form onSubmit={handleSubmit}>
-                    <input 
+                    <div className="form-floating">
+                        <input 
                         className="form-control"
-                        type="email" 
+                        type="verify" 
+                        id="Email"
                         placeholder="Enter Your Email"
                         required
                         onChange={(e) => {
@@ -86,22 +90,29 @@ const SignInComponent = () => {
                         }}
                         value={email}
                     />
+                    <label htmlFor="verify">Enter Your Email</label>
+                    </div>
                     <br />
-                    <input 
+                    <div className="form-floating">
+                        <input 
                         className="form-control"
                         type="password"
-                        placeholder="Enter Your Password"
+                        id="checkin"
+                        placeholder=""
                         required
                         onChange={(e) => {
                             updatePassword(e.target.value)
                         }}
                        value={password}
                      />
+                     <label htmlFor="checkin">Enter Your Password</label>
+                    </div>
                      <br />
                      <button className="btn btn-dark">Sign In</button>
                      <br />
 
                      <hr />
+                     
                      <Link to="/signup">Dont have an account? Sign up</Link>
                      
 
@@ -110,6 +121,7 @@ const SignInComponent = () => {
                 </form>
             </div>
             
+        </div>
         </div>
     )
 }

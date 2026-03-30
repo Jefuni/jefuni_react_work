@@ -8,19 +8,26 @@ import GetProduct from './Components/GetProduct';
 import MakePayment from './Components/MakePayment';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import FooterComponent from './Components/FooterComponent';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
+
+
+
 function App() {
   return (
 
     <BrowserRouter>
-      <div className="container-fluid">
+      <div className="container-fluid header-container-override">
         <div className="App">
           <header className="header">
             <div className="header-content">
 
-              {/* Text Section */}
+              
               <div className="text-section">
-                <h1 className="brand">Topmark Laptops</h1>
-                <p className="tagline">Your Tech Brand</p>
+                <h1 className="brand">Topmark Technologies</h1>
+                <p className="tagline">Your Your Trusted Tech Partner</p>
               </div>
             </div>
           </header>
@@ -36,6 +43,7 @@ function App() {
           </Routes>
         </div>
       </div>
+      <FooterComponent/>
     </BrowserRouter>
   );
 }
