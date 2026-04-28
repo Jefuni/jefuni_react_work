@@ -40,7 +40,7 @@ const SignInComponent = () => {
             user_data.append("password", password )
 
 
-            const response = await axios.post("https://bundi.alwaysdata.net/api/signin", user_data)
+            const response = await axios.post("https://jefuni.alwaysdata.net/api/signin", user_data)
 
 
             console.log(response)
